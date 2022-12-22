@@ -1,0 +1,101 @@
+@keyframes appear {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border-bottom: 2px solid #ffd91b;
+}
+
+.container > div {
+  align-self: stretch;
+}
+
+.container > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+.container > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.container > div:nth-child(2) > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.activeIndicator {
+  width: 100%;
+  background-color: #ffd91b;
+  height: 4px;
+  border-radius: 100px;
+  animation: appear 0.3s ease-in-out;
+}
+
+/* .container > div:nth-child(2) > a > div:nth-child(1)::before {
+  content: "";
+} */
+
+.countryDropdownContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.countryDropdownContainer > img {
+  height: 16px;
+  width: 22px;
+}
+
+.container > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+  box-sizing: border-box;
+}
+
+.container > div:nth-child(3) > div:nth-child(1) {
+  width: 35%;
+}
+
+.container > div:nth-child(3) > div:nth-child(2) {
+  width: 60%;
+}
+
+.activeNav {
+  color: #ffd91b;
+}
