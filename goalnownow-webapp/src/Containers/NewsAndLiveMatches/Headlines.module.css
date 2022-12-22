@@ -19,6 +19,7 @@
 
 .container > div:nth-child(2) {
   width: 50%;
+  background: var(--foregroundBlack);
 }
 
 .container > div > span:nth-child(1) {

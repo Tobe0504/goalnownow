@@ -1,6 +1,8 @@
 import React from "react";
 import BreakingNews from "./BreakingNews";
+import FeaturedMatch from "./FeaturedMatch";
 import Headlines from "./Headlines";
+import LiveTables from "./LiveTables";
 import classes from "./NewsAndLiveMatches.module.css";
 
 const NewsAndLiveMatches = () => {
@@ -12,8 +14,12 @@ const NewsAndLiveMatches = () => {
       <div className={classes.headlines}>
         <Headlines />
       </div>
-      <div className={classes.featuresMatches}></div>
-      <div className={classes.liveTable}></div>
+      <div className={classes.featuresMatches}>
+        <FeaturedMatch />
+      </div>
+      <div className={classes.liveTable}>
+        <LiveTables />
+      </div>
       <div className={classes.adSection}></div>
     </div>
   );

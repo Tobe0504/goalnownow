@@ -51,7 +51,7 @@ const LeaguesAndCategories = () => {
               <div
                 className={classes.categoryOptions}
                 style={
-                  data.isActive ? { maxHeight: "60vh" } : { maxHeight: "0px" }
+                  data.isActive ? { maxHeight: "54vh" } : { maxHeight: "0px" }
                 }
               >
                 {data.subCategories.map((datum) => {
