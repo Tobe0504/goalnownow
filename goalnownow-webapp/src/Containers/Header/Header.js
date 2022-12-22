@@ -10,7 +10,7 @@ import {
   faArrowAltCircleDown,
 } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Dropdown from "../../Components/Dropdown/Dropdown";
 import { countries } from "../../Utilities/countries";
 
@@ -71,9 +71,6 @@ const Header = () => {
   const [currentTime, setCurrentTime] = useState(
     `${hour} : ${minute} (${gmt})`
   );
-
-  //   navigation
-  const navigate = useNavigate();
 
   return (
     <div className={classes.container}>
