@@ -17,6 +17,7 @@
   font-size: 14px;
   line-height: 21px;
   border-bottom: 2px solid #ffd91b;
+  background: var(--backgroundBlack);
 }
 
 .container > div {
@@ -61,10 +62,6 @@
   border-radius: 100px;
   animation: appear 0.3s ease-in-out;
 }
-
-/* .container > div:nth-child(2) > a > div:nth-child(1)::before {
-  content: "";
-} */
 
 .countryDropdownContainer {
   display: flex;

@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../../Containers/Footer/Footer";
 import Header from "../../Containers/Header/Header";
+import LeaguesAndCategories from "../../Containers/LeaguesAndCategories/LeaguesAndCategories";
 import classes from "./Layout.module.css";
 
 const Layout = (props) => {
@@ -10,9 +11,11 @@ const Layout = (props) => {
         <Header />
       </div>
       <div className={classes.body}>
-        <div></div>
-        <div>{props.children}</div>
-        <div></div>
+        <div className={classes.leftSection}>
+          <LeaguesAndCategories />
+        </div>
+        <div className={classes.middleSection}>{props.children}</div>
+        <div className={classes.rightSection}></div>
       </div>
       <div className={classes.footer}>
         <Footer />
