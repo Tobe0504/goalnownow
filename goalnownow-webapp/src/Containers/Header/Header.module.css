@@ -23,19 +23,19 @@
   align-self: stretch;
 }
 
-.container > div:nth-child(1) {
+.logosection {
   display: flex;
   align-items: center;
 }
 
-.container > div:nth-child(2) {
+.navItemSection {
   display: flex;
   align-items: center;
   gap: 2rem;
   align-items: center;
 }
 
-.container > div:nth-child(2) > a {
+.navItemSection > a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,7 +80,7 @@
   width: 22px;
 }
 
-.container > div:nth-child(3) {
+.dropdownSection {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,14 +88,52 @@
   box-sizing: border-box;
 }
 
-.container > div:nth-child(3) > div:nth-child(1) {
+.dropdownSection > div:nth-child(1) {
   width: 35%;
 }
 
-.container > div:nth-child(3) > div:nth-child(2) {
+.dropdownSection > div:nth-child(2) {
   width: 60%;
 }
 
 .activeNav {
   color: #ffd91b;
+}
+
+.responsivemenu,
+.searchSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .navItemSection,
+  .dropdownSection {
+    display: none;
+  }
+
+  .responsivemenu,
+  .searchSection {
+    display: inline-flex;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .navItemSection,
+  .dropdownSection {
+    display: none;
+  }
+
+  .responsivemenu,
+  .searchSection {
+    display: inline-flex;
+    font-size: 1.2rem;
+  }
 }

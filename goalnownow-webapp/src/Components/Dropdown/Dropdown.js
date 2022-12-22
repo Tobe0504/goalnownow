@@ -33,8 +33,6 @@ const Dropdown = (props) => {
     };
   }, []);
 
-  const schools = ["Unilag", "Me", "Rat", "Huawei", "Uniben", "Uniport"];
-
   return (
     <div className={classes.dropdown} ref={dropdownRef}>
       <div
@@ -63,7 +61,11 @@ const Dropdown = (props) => {
       >
         {props.selected || props.title}
         <i>
-          <FontAwesomeIcon icon={faAngleDown} color="#3C393A" />
+          <FontAwesomeIcon
+            icon={faAngleDown}
+            color="#3C393A"
+            id="dropdownIcon"
+          />
         </i>
       </div>
       {isActive && (

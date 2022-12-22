@@ -9,6 +9,7 @@ import {
   faNewspaper,
   faArrowAltCircleDown,
 } from "@fortawesome/free-regular-svg-icons";
+import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 import Dropdown from "../../Components/Dropdown/Dropdown";
 import { countries } from "../../Utilities/countries";
@@ -32,8 +33,6 @@ const Header = () => {
       return { ...data, isActive: false };
     });
     setNavItems(activeNav);
-
-    console.log(navItems);
   };
 
   // States
@@ -78,10 +77,13 @@ const Header = () => {
 
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes.responsivemenu}>
+        <FontAwesomeIcon icon={faBars} />
+      </div>
+      <div className={classes.logosection}>
         <img src={goalNowNowLogo} alt="GoalNowNow Logo" />
       </div>
-      <div>
+      <div className={classes.navItemSection}>
         {navItems.map((data) => {
           return (
             <Link
@@ -91,8 +93,9 @@ const Header = () => {
               }}
               to={data.route}
               className={
-                window.location.href.includes(data.route) &&
-                `${classes.activeNav}`
+                window.location.href.includes(data.route)
+                  ? `${classes.activeNav}`
+                  : undefined
               }
             >
               {window.location.href.includes(data.route) && (
@@ -106,7 +109,7 @@ const Header = () => {
           );
         })}
       </div>
-      <div>
+      <div className={classes.dropdownSection}>
         <div>
           <Dropdown
             selected={country}
@@ -129,6 +132,9 @@ const Header = () => {
         <div>
           <Dropdown selected={currentTime} setSelected={setCurrentTime} />
         </div>
+      </div>
+      <div className={classes.searchSection}>
+        <FontAwesomeIcon icon={faSearch} />
       </div>
     </div>
   );
