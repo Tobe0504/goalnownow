@@ -38,3 +38,18 @@ export const navItems = [
     route: "/get-the-app",
   },
 ];
+
+export const scorePageNavItems = [
+  {
+    id: v4(),
+    title: "Matches",
+    isActive: false,
+    route: "/scores/matches",
+  },
+  {
+    id: v4(),
+    title: "Tables",
+    isActive: false,
+    route: "/scores/tables",
+  },
+];
