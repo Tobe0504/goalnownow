@@ -137,6 +137,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .leagueHeader {
+    padding: 1rem 1rem;
+  }
+
   .leagueTableHead {
     padding: 1rem 1rem;
   }

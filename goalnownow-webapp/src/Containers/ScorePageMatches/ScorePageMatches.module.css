@@ -151,6 +151,7 @@
   font-size: 12px;
   line-height: 18px;
   animation: appear 0.3s ease-in-out;
+  padding: 0.5rem 0;
 }
 
 .oddsSectionMobile > div {
