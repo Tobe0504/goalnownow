@@ -5,7 +5,7 @@ import ScoreMobileAdSection from "./ScoreMobileAdSection";
 import classes from "./ScorePageLayout.module.css";
 import ScorePageNav from "./ScorePageNav";
 
-const ScorePageLayout = () => {
+const ScorePageLayout = (props) => {
   return (
     <Layout>
       <div className={classes.container}>
@@ -18,6 +18,7 @@ const ScorePageLayout = () => {
         <div className={classes.mobileAdSection}>
           <ScoreMobileAdSection />
         </div>
+        <div className={classes.body}>{props.children}</div>
       </div>
     </Layout>
   );

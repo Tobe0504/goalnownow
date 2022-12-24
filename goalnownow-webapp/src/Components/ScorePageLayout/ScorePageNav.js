@@ -9,8 +9,11 @@ import {
 import { scorePageNavItems } from "../../Utilities/navItems";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MatchesContext } from "../../Context/MatchesContext";
 
 const ScorePageNav = () => {
+  const { showOdds, setShowOdds } = useContext(MatchesContext);
   return (
     <div className={classes.outerContainer}>
       <div className={classes.container}>
@@ -57,7 +60,12 @@ const ScorePageNav = () => {
         <div>
           <span>Show Odds</span>
           <span>
-            <ToggleSwitch />
+            <ToggleSwitch
+              onChange={() => {
+                setShowOdds(!showOdds);
+              }}
+              checked={showOdds}
+            />
           </span>
         </div>
       </div>
@@ -88,7 +96,12 @@ const ScorePageNav = () => {
         <div>
           <span>Show Odds</span>
           <span>
-            <ToggleSwitch />
+            <ToggleSwitch
+              onChange={() => {
+                setShowOdds(!showOdds);
+              }}
+              checked={showOdds}
+            />
           </span>
         </div>
       </div>

@@ -5,14 +5,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import LeagueAndCategoryContextprovider from "./Context/LeagueAndCategoryContext";
+import MatchesContextProvider, {
+  MatchesContext,
+} from "./Context/MatchesContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <LeagueAndCategoryContextprovider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <MatchesContextProvider>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </MatchesContextProvider>
     </LeagueAndCategoryContextprovider>
   </BrowserRouter>
 );

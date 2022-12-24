@@ -7,6 +7,13 @@
   }
 }
 
+.nav {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  cursor: pointer;
+  /* margin-right: 2rem; */
+}
+
 .leagueHeader {
   display: flex;
   align-items: center;
