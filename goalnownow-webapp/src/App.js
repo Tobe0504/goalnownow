@@ -4,12 +4,13 @@ import { Routes, Route } from "react-router-dom";
 import ScorePageLayout from "./Components/ScorePageLayout/ScorePageLayout";
 import ScorePageMatches from "./Containers/ScorePageMatches/ScorePageMatches";
 import ScorePageMatchByLeague from "./Containers/ScorePageMatchByLeague/ScorePageMatchByLeague";
+import ScorePageTables from "./Containers/ScorePageTables/ScorePageTables";
 
 function App() {
   return (
     <Routes>
       <Route path="/scores" element={<ScorePageLayout />} />
-      <Route path="/scores/tables" element={<ScorePageLayout />} />
+      <Route path="/scores/tables" element={<ScorePageTables />} />
       <Route path="/favourites" element={<Layout />} />
       <Route path="/news" element={<Layout />} />
       <Route path="/get-the-app" element={<Layout />} />
